@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETHNUS MERN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #82CCB5;
+            --text-dark: #2C3E50;
+            --text-light: #ECF0F1;
+            --background: #F5F7FA;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            min-height: 100vh;
+            padding: 2rem;
+            color: var(--text-dark);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow);
+            max-width: 800px;
+            margin: 2rem auto;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px var(--shadow);
+        }
+
+        .profile-section {
+            text-align: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #eee;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .profile-section h2 {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            color: var(--text-dark);
+        }
+
+        .main-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 2rem;
+            border-radius: 12px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: var(--text-light);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        td {
+            background: white;
+            transition: background-color 0.3s ease;
+        }
+
+        tr:hover td {
+            background: #f8f9fa;
+        }
+
+        .section-header {
+            background: #2980b9 !important;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+
+            .main-title {
+                font-size: 1.5rem;
+            }
+
+            th, td {
+                padding: 0.75rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container profile-section">
+        <h2>Name: Shardul Rana</h2>
+        <h2>Registration No: 22BSA10251</h2>
+        <h2>Email: shardulrana2022@vitbhopal.ac.in</h2>
+    </div>
+    
+    <div class="container">
+        <h1 class="main-title">Course Tasks Index</h1>
+        <table>
+            <tr>
+                <th colspan="2" class="section-header">HTML Tasks</th>
+            </tr>
+            <tr>
+                <th>Task Number</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Task-1</td>
+                <td><a href="Task 1 - HTML.html" target="_blank">View Task</a></td>
+            </tr>
+            
+            <tr>
+                <th colspan="2" class="section-header">CSS Tasks</th>
+            </tr>
+            <tr>
+                <th>Task Number</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Task-1</td>
+                <td><a href="Task 1 - CSS.html" target="_blank">View Task</a></td>
+            </tr>
+            
+            <tr>
+                <th colspan="2" class="section-header">Bootstrap Tasks</th>
+            </tr>
+            <tr>
+                <th>Task Number</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Task-1</td>
+                <td><a href="Task 1 - Bootstrap.html" target="_blank">View Task</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
